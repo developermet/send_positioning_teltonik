@@ -28,7 +28,7 @@ async function miFuncion() {
     const data =
       '{"jsonrpc":"2.0", "id":1, "method":"call", "params":[ "00000000000000000000000000000000", "session", "login",{"username":"admin", "password":"Met.its2022"}]}';
     const resp = await axios
-      .post("https://192.168.1.1/ubus", data, {
+      .post("https://10.100.100.254/ubus", data, {
         httpsAgent: agent,
         timeout: 2000,
       })
@@ -55,7 +55,7 @@ async function miFuncion() {
     }`;
 
     const getInfoDevice = await axios
-      .post("https://192.168.1.1/ubus", JSON.parse(bodyInfoDevice), {
+      .post("https://10.100.100.254/ubus", JSON.parse(bodyInfoDevice), {
         httpsAgent: agent,
         timeout: 2000,
       })
@@ -84,7 +84,7 @@ async function miFuncion() {
     const body = `{"jsonrpc": "2.0", "id": 1, "method": "call", "params": ["${token}", "file", "exec", {"command":"gpsctl", "params":["-ixave"]}]}`;
 
     const getGPSdata = await axios
-      .post("https://192.168.1.1/ubus", JSON.parse(body), {
+      .post("https://10.100.100.254/ubus", JSON.parse(body), {
         httpsAgent: agent,
         timeout: 2000,
       })
@@ -148,7 +148,7 @@ async function miFuncion() {
     ]}`;
 
     const getWifiData = await axios
-      .post("https://192.168.1.1/ubus", JSON.parse(bodyWifi), {
+      .post("https://10.100.100.254/ubus", JSON.parse(bodyWifi), {
         httpsAgent: agent,
         timeout: 2000,
       })
