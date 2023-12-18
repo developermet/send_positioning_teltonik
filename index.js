@@ -131,12 +131,14 @@ async function miFuncion() {
 
     const lat = coordinates.split("\n")[0];
     const lng = coordinates.split("\n")[1];
-    const speed = coordinates.split("\n")[2];
+    const alt = coordinates.split("\n")[2];
+    const speed = coordinates.split("\n")[3];
 
     console.log(
       "🚀 ~ file: index.js:107 ~ miFuncion ~ coordinates LAT - LNG -SPEED, TIMESTAMP",
       lat,
       lng,
+      alt,
       speed,
       fechaFormateada
     );
